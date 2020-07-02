@@ -1,0 +1,14 @@
+.SliderItem{
+    position: absolute;
+    min-width: 90%;
+    height: 55%;
+    object-fit: cover;
+    transition: 0.7s all;
+    z-index: -1;
+    left: 200px;
+}
+
+#slider{
+    left: 0;
+    @include ElemDimensions(100%, 55%);
+}

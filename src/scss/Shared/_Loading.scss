@@ -1,0 +1,12 @@
+
+.loadingContainer{
+    top: 0;
+    
+    @include ElemDimensions();
+        @extend %flex-center;
+        @include justify-content(center);
+
+    .loading{
+        
+    }
+}

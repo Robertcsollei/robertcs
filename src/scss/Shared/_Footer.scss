@@ -1,0 +1,15 @@
+footer{
+    background-color: $navLight;
+    @include flexbox();
+    @include ElemDimensions($height: 40px);
+    bottom: 0px;
+    cursor: pointer;
+    @include justify-content(center);
+    @include align-items(center);
+    .footerMail{
+
+        font-weight: 400;
+        font-size: 0.8rem;
+    }
+    
+}

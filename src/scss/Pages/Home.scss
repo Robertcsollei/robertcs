@@ -1,0 +1,20 @@
+
+
+#Home{
+
+    z-index: 1;
+    @include ElemDimensions(80%);
+    @extend %flex-center;
+
+     > .homeContent{
+        z-index: 1;
+        @include ElemDimensions();
+        @extend %flex-align-center;
+        margin-left: 500px;
+    }
+    > #canvas{
+        position: absolute;
+        right: 0;
+        z-index: -2;
+    }
+}

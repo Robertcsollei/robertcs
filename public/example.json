@@ -1,0 +1,48 @@
+
+[
+    {
+        "id": 1,
+        "Title": "Paradigm Watch",
+        "Description": "An amazing project where I have cretaed this and that you can learn more if you wanna its completely up to you broAn amazing project where I have cretaed this and that you can learn more if you wanna its completely up to you broAn amazing project where I have cretaed this and that you can learn more if you wanna its completely up to you bro",
+        "imagePath1": "images/apollo1.png",
+        "imagePath2": "images/apollo2.png",
+        "tags": ["UX", "UI", "Front-end", "JavaScript", "Three.js", "3D modeling"]
+    },
+    {
+        "id": 2,
+        "Title": "Movie Palette",
+        "Description": "An amazing project where I have cretaed this and that you can learn more if you wanna its completely up to you bro",
+        "imagePath1": "images/default.png",
+        "imagePath2": "images/default.png",
+        "tags": ["UX", "UI", "Front-end", "JavaScript", "Three.js", "3D modeling", "new"]
+        
+    },   {
+        "id": 3,
+        "Title": "IDOR",
+        "Description": "An amazing project where I have cretaed this and that you can learn more if you wanna its completely up to you bro",
+        "imagePath1": "images/default.png",
+        "imagePath2": "images/default.png",
+        "tags": ["UX", "UI", "Front-end", "JavaScript", "Three.js", "3D modeling"]
+    },   {
+        "id": 4,
+        "Title": "Motion Graphics",
+        "Description": "An amazing project where I have cretaed this and that you can learn more if you wanna its completely up to you bro",
+        "imagePath1": "images/default.png",
+        "imagePath2": "images/default.png",
+        "tags": ["UX", "UI", "Front-end", "JavaScript", "Three.js", "3D modeling"]
+    },   {
+        "id": 5,
+        "Title": "Illustrations",
+        "Description": "An amazing project where I have cretaed this and that you can learn more if you wanna its completely up to you bro",
+        "imagePath1": "images/default.png",
+        "imagePath2": "images/default.png",
+        "tags": ["UX", "UI", "Front-end", "JavaScript", "Three.js", "3D modeling"]
+    },   {
+        "id": 6,
+        "Title": "3D playground",
+        "Description": "An amazing project where I have cretaed this and that you can learn more if you wanna its completely up to you bro",
+        "imagePath1": "images/default.png",
+        "imagePath2": "images/default.png",
+        "tags": ["UX", "UI", "Front-end", "JavaScript", "Three.js", "3D modeling"]
+    }
+]

@@ -1,0 +1,22 @@
+.squareBase{
+    position: absolute;
+    left: 30%;
+    top: 30%;
+    width: 250px;
+    height: 400px;
+    z-index: -1;
+    
+}
+
+.squareBorder{
+    border: 20px solid;
+    border-image-source: url(../../images/gradient.png);
+    border-image-slice: 60 30;
+   
+}
+
+.circle{
+    position: absolute;
+}
+
+

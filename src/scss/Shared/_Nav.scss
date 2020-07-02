@@ -1,0 +1,131 @@
+
+
+
+
+
+
+nav{
+
+    position: relative;
+    @include flexbox();
+    @include justify-content(flex-start);
+    @include ElemDimensions($width:300px);
+    z-index: 5;
+    
+
+    > .NavContainer{
+        
+        @extend  %flex-center;
+        @include justify-content(space-between);
+        @include ElemDimensions();
+        background: linear-gradient(90deg , $navLight , $navDark);
+
+        > .NavHeader{
+            @include ElemDimensions($height: auto);
+            @extend %flex-center;
+            transform-origin: right;
+            border-bottom: 2px solid $white;
+           > a{
+                @include ElemDimensions(200px, 200px);
+                margin: 25px;
+                
+                
+            }
+            > .MyName{
+                margin-bottom: 20px;
+
+                > .Title{
+                    @extend %space-reset;
+                }
+                
+            }
+            
+        }
+        .LogoLink{
+            
+            @include ElemDimensions();
+            @include flexbox();
+            @include justify-content(center);
+            padding: 20px 0 0 0;
+            
+          
+            
+        }
+
+.Green {
+    color: $green;
+}
+
+.LogoLink > img{
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+        .NavLinks{
+            list-style: none;
+            @extend %flex-center;
+            @extend %space-reset;
+            @include justify-content(center);
+            @include ElemDimensions($height: 60%);
+           
+
+            li{
+                
+                @include ElemDimensions($height: 10%);
+                
+                margin-top: 0px;
+
+               
+                
+                .active {
+                    background-color:$white;
+                    color: $navDark;
+                    transition: 0.3s;
+                    
+                }
+                &:hover .active{
+                    color: $navLight;
+                    border-left: 0px solid $navDark;
+                }
+                a {
+                    @extend %link;
+                   
+                    @include ElemDimensions();
+                    @extend %flex-center;
+                    @include justify-content(center);
+                    
+                   
+                    span {
+                        z-index: 1;
+                        
+                    }
+                    &::before{
+                        display: block;
+                         position: absolute;
+                         right: 0%;
+                        @include ElemDimensions(0%, 6%);
+                        background: $white;
+                        z-index: 0;
+                        overflow: hidden;
+                        opacity: 0.5;
+                        content: '.';
+                        
+                    }
+                    &:hover::before{
+                        opacity: 0.6;
+                        transition: 1s;
+                        
+                        @include ElemDimensions(100%, 6%);
+                    }
+                }
+            }
+            &Icon{
+                font-size: 2rem;
+                margin-bottom: 5px;
+                z-index: 1;
+            }
+        }
+    }
+    
+    
+}

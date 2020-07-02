@@ -1,0 +1,30 @@
+.PortfolioContent{
+    @include ElemDimensions();
+    margin: 50px;
+}
+
+.header{
+    @include ElemDimensions(90%,auto);
+    @extend %flex-between-center;
+}
+
+.articles{
+    @extend %flex-between-center;
+    margin-right: 100px;
+    > .subTitle{
+        @include ElemDimensions(30%, 230px);
+    }
+}
+
+// .PItem-Button{
+//     @include ElemDimensions(10% , 50px);
+//     @extend %flex-center-center;
+//     background-color: $white;
+//     color: $blue;
+//     border-radius: 25px;
+//     border: none;
+//     font-weight: 700;
+//     font-size: 1.5rem;
+//     bottom: 0;
+
+// }

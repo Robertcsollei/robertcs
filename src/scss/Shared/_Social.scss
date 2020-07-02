@@ -1,0 +1,30 @@
+
+
+.SM-Links{
+    display: flex;
+    width: 150px;
+    @include justify-content(space-between);
+    > .SM-item{
+
+        width: 40px;
+        height: 40px;
+        background-color: $green;
+        color: $blue;
+        border-radius: 50%;
+        @extend %flex-center;
+        @include justify-content(center);
+        transition: 0.5s all;
+        &:hover {
+            background-color: $blue;
+            color: $green;
+        }
+
+        > li > span {
+            height: 1px;
+            width: 1px;
+            position: absolute;
+            overflow: hidden;
+            top: -10px;
+        }
+    }
+}

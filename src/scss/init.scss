@@ -1,0 +1,161 @@
+$background: #fff;
+$navLight: #474747;
+$navDark: #2F2F2F; 
+$white: #fff;
+
+$design: #E9E9E9;
+
+$comment: #76AF5B;
+$let: #2E8EFF;
+$var: #8CDCDA;
+$string: #CE9178;
+
+$green: #57D5AA;
+$blue: #4F62B1;
+
+ $circle: 50%;
+
+
+ @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@600;700&display=swap');
+
+
+
+
+ @mixin ElemDimensions($width: 100%, $height: 100%){
+    width: $width;
+    height: $height;
+}
+
+
+
+ %space-reset {
+    margin: 0;
+    padding: 0;
+}
+%link{
+    color: $white;
+    text-decoration: none;
+}
+%flex-center{
+    @include flexbox();
+    
+    @include flex-direction(column);
+    @include align-items(center);
+}
+%flex-align-center{
+    @include flexbox();
+    @include flex-direction(column);
+    @include justify-content(center);
+}
+
+%flex-center-evenly {
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(space-evenly);
+}
+
+%flex-end{
+    @include flexbox();
+    @include flex-direction(column);
+    @include justify-content(flex-start);
+    @include align-items(flex-end);
+}
+
+%flex-end-end{
+    @include flexbox();
+    @include flex-direction(column);
+    @include justify-content(flex-end);
+    @include align-items(flex-end);
+}
+
+%flex-evenly-column {
+    @include flexbox();
+    @include flex-direction(column);
+    @include justify-content(space-evenly);
+    @include align-items(flex-start);
+}
+
+%flex-center-center{
+    @include flexbox();
+    @include justify-content(center);
+    @include align-items(center);
+}
+
+%flex-between-center {
+    @include flexbox();
+    @include justify-content(space-between);
+    @include align-items(center);
+}
+
+
+#root{
+    position:absolute;
+    width:100%;
+    overflow-y:hidden;
+    overflow-x: hidden;
+    top:0;
+    bottom:0;
+    background: linear-gradient(45deg, $blue, $green);
+    display: flex;
+    z-index: -3;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Roboto;
+    
+    color: $white;
+}
+
+.container{
+    @include ElemDimensions(80%, auto)
+}
+
+.full{
+    
+    @include ElemDimensions()
+}
+
+button {
+    cursor: pointer;
+}
+button:focus{
+    outline:0;
+}
+
+h1, h3, h5{
+    font-family: 'Source Serif Pro', serif;
+    margin: 0;
+}
+
+h1{
+    
+    -webkit-text-shadow: -4px 4px  $blue;  
+    -moz-text-shadow: -4px 4px  $blue;
+    text-shadow: -4px 4px $blue;
+    font-size: 3.5rem;
+    margin: 0;
+}
+
+h2{
+    font-size: 1.5rem;
+}
+
+h3{
+    font-family: 'Source Serif Pro', serif;
+    font-size: 1.2rem;
+}
+
+ul{
+    list-style: none;
+    @extend %space-reset;
+}
+
+a{
+    text-decoration: none;
+}
+
+label{
+    font-family: Roboto;
+    font-weight: 200;
+}

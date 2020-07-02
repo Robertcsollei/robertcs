@@ -1,0 +1,61 @@
+.navButtons{
+    position: absolute;
+    @include ElemDimensions(80%, 97%);
+    @include flexbox();
+    @include align-items(flex-end);
+    @include justify-content(flex-end);
+    top: 0;
+    z-index: 5;
+    pointer-events: none;
+
+    > button {
+        margin-left:50px ;
+    }
+}
+
+.ScrollButton{
+    @extend .navButtons;
+    @include align-items(center);
+    @include flex-direction(column);
+}
+
+.btn{
+    background-color: rgba(0,0,0,0);
+    border: none;
+    @extend %flex-center;
+    pointer-events: visible;
+
+    >svg {
+        margin-bottom: 10px;
+    }
+    > span {
+        color: $white;
+    }
+
+}
+
+.Keywords{
+    left: 75%;
+    top: 20%;
+    position: absolute;
+    @extend %flex-end-end;
+    @include ElemDimensions(10%,auto);
+    text-align: right;
+    
+    > #hash{ 
+        width: 90%;
+    }
+
+    @include for-tablet-portrait-up{
+        
+    }
+}
+
+.path {
+    fill: white;
+}
+
+.btn:nth-child(odd) > svg{
+    
+    transform: rotate(180deg);
+}

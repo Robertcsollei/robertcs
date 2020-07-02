@@ -1,0 +1,28 @@
+
+.progressIcons{
+    position: absolute;
+    z-index: 4;
+    top: 50px;
+    right: 50px;
+
+    > .activeCircle, > .inactiveCircle{
+        @include ElemDimensions(25px, 25px);
+        border: 4px solid $navLight;
+        border-radius: 50%;
+        margin-bottom: 10px;
+        @extend %flex-center-center;
+    }
+    > .activeCircle{
+        border-color: $white;
+        -webkit-box-shadow: -4px 4px  $blue;  
+    -moz-box-shadow: -4px 4px  $blue;
+    box-shadow: -4px 4px $blue;
+    }
+}
+
+.activeCircleInner{
+    @include ElemDimensions(20px, 20px);
+    background-color: $white;
+    border-radius: 50%;
+    
+}

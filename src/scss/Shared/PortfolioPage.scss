@@ -1,0 +1,71 @@
+.ImageContainer{
+    margin-top: 150px;
+    @include ElemDimensions();
+    @extend %flex-end;
+
+
+    > img{
+        position: absolute;
+        min-width: 30%;
+        max-width: 30%;
+        
+    }
+     > .FImage{
+         margin-top: 250px;
+        z-index: 1;
+    }
+    > .BImage{
+        padding-right: 300px;
+        top: 150px;
+        z-index: 0;
+        transition: 0.5s all;
+    }
+}
+
+.PItem-Title{
+    position: absolute;
+    margin: 0px 0px 0px 50px
+}
+
+.PItems-container{
+    position: absolute;
+    top: 150px;
+    @include ElemDimensions(20%, 600px);
+    @include flex-direction(column);
+    @extend %flex-center-evenly;
+    padding-left: 7.5%;
+
+    > .PItems-buttons{
+        @extend %flex-between-center ;
+        @include ElemDimensions(100%, auto);
+
+        > .PItem-Button{
+            @include ElemDimensions(45% , 50px);
+            @extend %flex-center-center;
+            background-color: $white;
+            color: $blue;
+            border-radius: 25px;
+            border: none;
+            font-weight: 700;
+            font-size: 1.5rem;
+            bottom: 0;
+        
+        }
+
+        > .hollow{
+            @extend .PItem-Button;
+            border: 5px solid $white;
+            background-color: rgba(0,0,0,0);
+            color: $white;
+        }
+    }
+    
+    
+    > .PItem-Desc{
+    
+        font-weight: 700;
+        font-size: 1.2rem;
+        
+    }
+}
+

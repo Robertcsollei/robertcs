@@ -1,0 +1,37 @@
+
+@import './scss/Font-Awesome/font-awesome.scss';
+@import './scss/flex.scss';
+@import './scss/media.scss';
+@import './scss/init.scss';
+
+@import './scss/Shared/Nav';
+@import './scss/Shared/Social';
+@import './scss/Shared/Footer';
+@import './scss/Shared/Square';
+@import './scss/Shared/Loading';
+@import './scss/Shared/PortfolioPage.scss';
+@import  './scss/Shared/Slider';
+@import './scss/Shared/ProgressIcons';
+
+@import './scss/Pages/Home.scss';
+@import './scss/Pages/Portfolio.scss';
+@import './scss/Pages/PortfolioItem.scss';
+@import './scss/Pages/about.scss';
+
+
+
+
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), url(./scss/fonts/Roboto-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: thin;
+  font-weight: 200;
+  src: local('Roboto'), url(./scss/fonts/Roboto-Thin.ttf) format('truetype');
+}
