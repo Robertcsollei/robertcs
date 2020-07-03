@@ -23,16 +23,4 @@
 
 
 
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Roboto'), url(./scss/fonts/Roboto-Regular.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'Roboto';
-  font-style: thin;
-  font-weight: 200;
-  src: local('Roboto'), url(./scss/fonts/Roboto-Thin.ttf) format('truetype');
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
