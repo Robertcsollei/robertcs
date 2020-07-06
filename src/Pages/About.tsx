@@ -19,7 +19,7 @@ function About(){
     useEffect(() => {
       const fetchData = async () => {
         const result = await axios(
-          'https://robcs-backend-7mhkgpd3n.vercel.app/about',
+          'https://robcs-backend.vercel.app/about',
         );
    
         setObjectType(result);
