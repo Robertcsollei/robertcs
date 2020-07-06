@@ -1,24 +1,45 @@
 import * as React from 'react';
-import {    NavLink  } from "react-router-dom";
+
 
 import Slideshow from '../Shared/SlideShow'
+
 
 
 function PortfolioItem(props: any) {
 
     
 
-let subTitles = ['Overview', 'Design', 'Development']
+let subTitles = ['Overview',  'Development', 'Design']
 
+if(props.location.state.title !== undefined){
 
+    console.log(props.location.state.title.includes("Asset"))
+    console.log(props.location.state.title)
+    
+}
+
+let subDesc : string[] = [];
+subDesc.push(props.location.state.desc)
+subDesc.push(props.location.state.dev)
+subDesc.push(props.location.state.des)
+let images : string[] = []
+ props.location.state.images.map((item : string) => {
+    return images.push(item)
+})
     return(
         <div className="full">
-            <Slideshow images={[props.location.state.image1 || "images/default.png", props.location.state.image2 || "images/default.png"]}/>
+            <Slideshow images={images}/>
             <div className="PortfolioContent">
                 
                 <div className="header">
                     <h1>{props.location.state.title}</h1>
-                    {/* <NavLink exact activeClassName="active" className="PItem-Button" to= "/Portfolio">DEMO</NavLink> */}
+
+                    {props.location.state.title.includes("Asset") ? 
+                 null
+                :
+                <button onClick={() => window.open(`${props.location.state.link}`, '_blank')}  className="PItem-Button">{props.isDev ? 'GitHub' : 'Video'}</button>
+            }
+                   
                     
                 </div>
                
@@ -28,7 +49,7 @@ let subTitles = ['Overview', 'Design', 'Development']
                 {subTitles.map((title, index) => {
                     return <article key={index} className="subTitle">
                                 <h2>{title}</h2>
-                                <p>{props.location.state.desc}</p>
+                                <p>{subDesc[index]}</p>
                             </article>
                 })}
 

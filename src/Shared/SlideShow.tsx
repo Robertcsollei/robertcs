@@ -59,7 +59,7 @@ function MoveItem(operator: boolean) {
             const prevElement: HTMLElement | null = document.getElementById(`${state.count}`);
             if(prevElement !== null){
                 
-                currentElement.style.left = '13.5%'
+                currentElement.style.left = '16%'
                 prevElement.style.left = '-100%'
                 console.log(state.count - 1, state.count + 1 )
                 
@@ -78,7 +78,7 @@ function MoveItem(operator: boolean) {
             } 
 
             if(prevElement !== null){
-                currentElement1.style.left = '13.5%'
+                currentElement1.style.left = '16%'
                 prevElement.style.left = '-100%'
                 prevElement.style.left = '100%'
                 
@@ -99,10 +99,16 @@ function MoveItem(operator: boolean) {
       
             <div id="slider">
 
-            {props.images.map((item, index) => {
+            {props.images.slice(0).reverse().map((item, index) => {
                 
-                if(index === 0)   return <img  id={`${index}`} src={item} key={index} alt={item} className="SliderItem" style={{zIndex: props.images.length - index}}/>
-                return <img  id={`${index}`} src={item} key={index} alt={item} className="SliderItem" style={{zIndex: props.images.length - index, left: '100%'}}/>
+                if(index === 0){
+                    if(item.includes('https'))    return  <iframe id={`${index}`} title={item} src={item} key={index} className="SliderItem" style={{zIndex: props.images.length - index}} frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe>
+                    return <img id={`${index}`} src={item} alt={item} key={index} className="SliderItem" style={{zIndex: props.images.length - index}}/>
+                }   
+                if(item.includes('https'))    return  <iframe  id={`${index}`} src={item} key={index} title={item} className="SliderItem" style={{zIndex: props.images.length - index, left: '100%'}} frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe>
+                    return <img  id={`${index}`} src={item} key={index} alt={item} className="SliderItem" style={{zIndex: props.images.length - index, left: '100%'}}/>
+                
+                
             })}
             <ProgressIcons length={props.images.length} active={state.count}/>
             

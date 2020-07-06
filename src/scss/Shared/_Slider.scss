@@ -1,14 +1,38 @@
 .SliderItem{
     position: absolute;
-    min-width: 90%;
+    min-width: 80%;
+    
     height: 55%;
     object-fit: cover;
+    object-position: top;
     transition: 0.7s all;
     z-index: -1;
-    left: 200px;
+    left: 300px;
+    opacity: 0.9;
+
+    
+    
 }
 
 #slider{
     left: 0;
     @include ElemDimensions(100%, 55%);
+    background-color: black;
+    transition: 0.7s all;
+    overflow: hidden;
+ 
+    &:hover{
+        height: 90%;   
+       }
+       &:hover > .SliderItem{
+        height: 90%;   
+       } 
+       
+       &:hover > .navButtons{
+           transition: 0.7s;
+            top: 30%;
+       }
+
+
+    
 }

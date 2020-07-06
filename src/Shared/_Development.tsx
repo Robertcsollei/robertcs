@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { transform } from 'framer-motion';
+import { type } from 'os';
 
 interface IModuleData{
-    sideList: string[],
+    sideList: object[],
     section1: string,
     section2: string,
     section3: string,
@@ -12,19 +13,26 @@ interface IModuleData{
     toggle: any
 }
 
+type ListItem = {
+    Icon: string,
+    Skill: string
+}
 
 function Developemnt(props: IModuleData) {
 
+    console.log(props)
 
     return(
-        <div onClick={props.toggle} className={`${props.darkMode ? 'development activeBlock' : 'design inactiveBlock'}`} style={props.state ? {transform: 'scale(0.2)'} : {transform: 'scale(0.99)'}}>
+        <div onClick={props.toggle} className={`${props.darkMode ? 'development activeBlock' : 'design inactiveBlock'}`} style={props.state ? {transform: 'scale(0.2)', cursor: 'pointer'} : {transform: 'scale(0.99)'}}>
             <div className="topBar"></div>
             <section className="dev-content">
                 <aside className="sideBar">
                     <ul className="dev-list">
                         <br/>
+                        
                     {props.sideList.map((item, index) => {
-                        return <li key={index} className="dev-items"><span>A</span><h3>{item}</h3></li>
+                        //@ts-ignore
+                        return <li key={index} className="dev-items"><img src={item.Icon} alt={item.Skill}/><h3>{item.Skill}</h3></li>
                     })}
                     </ul>
                 </aside>

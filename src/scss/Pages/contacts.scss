@@ -9,21 +9,21 @@
 
     > input, textarea{
         width: 20%;
-        background-color: rgba(0,0,0,0);
+        background-color: $white;
         border: none;
-        border-bottom: 2px solid $white;
-        color: white;
+        border-radius: 50px;
+        height: 25px;
+        color: black;
         outline: 0px;
         
     }
     > textarea{
         @extend %flex-end-end;
     }
-    > input:focus, textarea:focus {
-        background-color: rgba(0,0,0,0);
-    }
+    
     > input::placeholder, textarea::placeholder{
-        color: rgba(255,255,255,0.5);
+        color: $navDark;
+        padding-left: 20px;
         font-weight: 100;
     }
     >label {

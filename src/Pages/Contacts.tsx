@@ -2,7 +2,7 @@ import   React from 'react';
 import axios from 'axios';
 
 
-
+import testFunctions from '../js/functions';
 import Square from '../Shared/_SquareGraphic'
 
 class Contact extends React.Component {
@@ -25,11 +25,11 @@ class Contact extends React.Component {
       
         let data = {
             name: this.state.name,
-            email: this.state.email,
+            email: this.state.email,    
             message: this.state.message
         }
         
-        axios.post('https://robcs-backend-dc8pcjgfw.vercel.app', data)
+        axios.post('https://robcs-backend.vercel.app/', data)
         .then( res => {
             //@ts-ignore
             this.setState({ sent: true }, this.resetForm())
@@ -50,17 +50,18 @@ class Contact extends React.Component {
 
     render() {
         return(
-            <form className="contact-form" onSubmit={ (e) => this.formSubmit(e)}>
+            <form id="Home" className="contact-form" onSubmit={ (e) => this.formSubmit(e)}>
+                <canvas id="canvas" ref={testFunctions}></canvas>
                   <Square width={25} height={70} top={15} left={42.5} />
                 <h1>Get in touch!</h1>
                 <label className="message-name" htmlFor="message-name">Your Name</label>
-                <input onChange={e => this.setState({ name: e.target.value})} name="name" className="message-name"  placeholder="Your Name" value={this.state.name}/>
+                <input onChange={e => this.setState({ name: e.target.value})} name="name" type="text" className="message-name"  placeholder="Your Name" value={this.state.name}/>
             
                 <label className="message-email" htmlFor="message-email">Your Email</label>
-                <input onChange={(e) => this.setState({ email: e.target.value})} name="email" className="message-email"  placeholder="your@email.com" required value={this.state.email} />
+                <input onChange={(e) => this.setState({ email: e.target.value})} name="email" type="email" className="message-email"  placeholder="your@email.com" required value={this.state.email} />
                 
                 <label className="message" htmlFor="message-input">Your Message</label>
-                <textarea onChange={e => this.setState({ message: e.target.value})} name="message" className="message-input"  placeholder="Please write your message here" value={this.state.message} required/>
+                <textarea onChange={e => this.setState({ message: e.target.value})} name="message"  className="message-input"  placeholder="Please write your message here" value={this.state.message} required/>
             
                 <div className="button--container">
                     <button type="submit" className="hollow">{ this.state.buttonText }</button>

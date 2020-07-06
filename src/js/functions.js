@@ -81,7 +81,7 @@ export default function testFunctions() {
 
    function init(){
       particleArray = []
-      let numberOfParticles = 35
+      let numberOfParticles = 50
 
       for(let i = 0; i < numberOfParticles; i++){
          let size = (Math.random() * 5) + 1;

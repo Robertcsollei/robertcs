@@ -1,6 +1,7 @@
 import * as React from 'react';
 
-import SociamMediaIcons from '../Shared/_SociamMedia';
+import {    NavLink  } from "react-router-dom";
+
 import Square from '../Shared/_SquareGraphic'
 import testFunctions from '../js/functions';
 
@@ -12,7 +13,11 @@ function Home(){
             <div className="homeContent">
                 <h1 className="HeroTitle">Hi,<br/> I am Rob,<br/> a front-end dev.</h1>
                 <h4 className="HeroSubTitle">Front-end / Web design / UX / UI</h4>
-                <SociamMediaIcons/>
+                <div className="icons">
+               
+                <NavLink exact className="PItem-Button" activeClassName="active" to="/Portfolio">Portfolio</NavLink>
+                </div>
+                
             </div>
             
         </div>

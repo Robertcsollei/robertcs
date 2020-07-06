@@ -8,7 +8,7 @@ interface buttonControl{
 
 function Buttons(props : buttonControl) {
     return(
-        <div className="navButtons" style={{height: props.height + '%'}}>
+        <div className="navButtons" style={{height: props.height + '%', transition: "0.7s"}}>
         
         <button  className="btn" onClick={props.decrease}>
             <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">

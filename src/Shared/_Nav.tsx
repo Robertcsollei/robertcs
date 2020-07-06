@@ -3,6 +3,7 @@ import {    NavLink  } from "react-router-dom";
 
 
 
+import SociamMediaIcons from '../Shared/_SociamMedia';
 import Footer from './_Footer'
 
 function Nav(){
@@ -18,8 +19,13 @@ function Nav(){
                   <h2 className="Title White">Robert <br/> <span className="Green">Csöllei</span></h2>
                 </div>
                  
+               
             </div>
-            
+            <div className="soMe">
+
+            <SociamMediaIcons />
+            </div>
+
             <ul className = "NavLinks">
               <li>
                 <NavLink exact activeClassName="active" to="/">Home</NavLink>

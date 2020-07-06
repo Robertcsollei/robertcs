@@ -56,6 +56,11 @@ nav{
     color: $green;
 }
 
+.soMe{
+    margin-top: 50px;
+    z-index: 1;
+}
+
 .LogoLink > img{
   max-width: 100%;
   border-radius: 50%;
@@ -67,6 +72,7 @@ nav{
             @extend %space-reset;
             @include justify-content(center);
             @include ElemDimensions($height: 60%);
+            margin-top: -75px;
            
 
             li{

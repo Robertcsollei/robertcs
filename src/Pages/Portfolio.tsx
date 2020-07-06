@@ -21,7 +21,7 @@ function Portfolio(){
     useEffect(() => {
       const fetchData = async () => {
         const result = await axios(
-          '../example.json',
+          'http://localhost:4444/portfolio',
         );
    
         setObjectType(result);
@@ -74,9 +74,15 @@ function Portfolio(){
             {ObjectType.data !== undefined &&  <PPAge 
     
             Title = {ObjectType.data[state.count].Title} 
+            Plot = {ObjectType.data[state.count].Plot}
+            dev = {ObjectType.data[state.count].dev}
+            des = {ObjectType.data[state.count].des}
+            tags = {ObjectType.data[state.count].tags}
+            link = {ObjectType.data[state.count].link}
+            isDev = {ObjectType.data[state.count].isDev}
             Description = {ObjectType.data[state.count].Description}
-            imagePath1 = {ObjectType.data[state.count].imagePath1}
-            imagePath2 = {ObjectType.data[state.count].imagePath2}
+            images = {ObjectType.data[state.count].images}
+            thumbnails = {ObjectType.data[state.count].thumbnails}
             length = {ObjectType.data.length}
             active = {state.count}
     />     }

@@ -11,10 +11,29 @@
         @include ElemDimensions();
         @extend %flex-align-center;
         margin-left: 500px;
+       > .icons{
+        @include ElemDimensions(25%, auto);
+            @include flexbox();
+            @include justify-content(space-between);
+
+            > .PItem-Button{
+                @include ElemDimensions(200px , 50px);
+                @extend %flex-center-center;
+                background-color: $white;
+                color: $blue;
+                border-radius: 25px;
+                border: none;
+                font-weight: 700;
+                font-size: 1.5rem;
+                bottom: 0;
+            
+            }
+       }
     }
     > #canvas{
         position: absolute;
         right: 0;
         z-index: -2;
     }
+    
 }

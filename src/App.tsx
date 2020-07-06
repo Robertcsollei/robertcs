@@ -16,6 +16,7 @@ import PortfolioItem from './Pages/PortfolioItem'
 
 
 function App() {
+  window.document.title = "Robert Csollei - Front-end development"
   return (
     <Router>
       <Nav/>
