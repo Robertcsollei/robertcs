@@ -21,7 +21,7 @@ function Portfolio(){
     useEffect(() => {
       const fetchData = async () => {
         const result = await axios(
-          'http://localhost:4444/portfolio',
+          'https://robcs-backend-7mhkgpd3n.vercel.app/portfolio',
         );
    
         setObjectType(result);
