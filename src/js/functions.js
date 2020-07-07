@@ -6,6 +6,9 @@ export default function testFunctions() {
    canvas.width  = window.innerWidth - '300';
    canvas.height = window.innerHeight;
 
+   if(window.innerWidth < 1200){
+      canvas.width = window.innerWidth
+   }
 
    let particleColor = "#fff"
 
@@ -100,6 +103,7 @@ export default function testFunctions() {
 
    function animate() {
       requestAnimationFrame(animate)
+      
       ctx.clearRect(0,0, canvas.width, canvas.height)
 
       for(let prt = 0; prt < particleArray.length; prt++){

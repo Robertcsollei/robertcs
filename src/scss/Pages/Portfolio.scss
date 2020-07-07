@@ -7,9 +7,18 @@
     top: 0;
     z-index: 5;
     pointer-events: none;
+    @include for-tablet-portrait-up(){
+        @include ElemDimensions(100%, 98%);
+        @include justify-content(center);
+     }
+ 
 
     > button {
         margin-left:50px ;
+
+        @include for-tablet-portrait-up(){
+            margin: 0 25px;
+         }
     }
 }
 
@@ -25,8 +34,13 @@
     @extend %flex-center;
     pointer-events: visible;
 
+    
     >svg {
         margin-bottom: 10px;
+        @include for-tablet-portrait-up(){
+            margin: 2px 0px;
+         }
+        
     }
     > span {
         color: $white;

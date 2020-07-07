@@ -1,11 +1,19 @@
 .PortfolioContent{
     @include ElemDimensions();
     margin: 50px;
+    @include for-tablet-portrait-up(){
+        @include ElemDimensions(100%, auto);
+        margin: 25px 20px;
+     }
 }
 
 .header{
     @include ElemDimensions(90%,auto);
     @extend %flex-between-center;
+
+    @include for-tablet-portrait-up(){
+        margin-top: -45px;
+      }
     >     .PItem-Button{
         @include ElemDimensions(10% , 50px);
         @extend %flex-center-center;
@@ -23,8 +31,18 @@
 .articles{
     @extend %flex-between-center;
     margin-right: 100px;
+
+    @include for-tablet-portrait-up(){
+       margin: -10px 0px;
+     }
+    
     > .subTitle{
         @include ElemDimensions(30%, 230px);
+
+        @include for-tablet-portrait-up(){
+            @include ElemDimensions(90%, 20%);
+            font-size: 0.9rem;
+         }
     }
 }
 

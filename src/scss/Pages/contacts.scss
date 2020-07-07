@@ -3,9 +3,7 @@
     @extend %flex-center-center;
     @include flex-direction(column);
 
-    > .message-name{
 
-    }
 
     > input, textarea{
         width: 20%;
@@ -15,10 +13,16 @@
         height: 25px;
         color: black;
         outline: 0px;
+        @include for-tablet-portrait-up(){
+            width: 80%;
+            font-size: 1rem;
+        }
         
     }
     > textarea{
         @extend %flex-end-end;
+
+        min-height: 50px;
     }
     
     > input::placeholder, textarea::placeholder{
@@ -44,6 +48,9 @@
             font-weight: 700;
             font-size: 1rem;
             bottom: 0;
+        }
+        @include for-tablet-portrait-up(){
+            @include ElemDimensions(50% , 50px);
         }
     }
     

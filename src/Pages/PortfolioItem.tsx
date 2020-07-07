@@ -7,10 +7,11 @@ import Slideshow from '../Shared/SlideShow'
 
 function PortfolioItem(props: any) {
 
+ let subTitles = ['Overview']
     
-
-let subTitles = ['Overview',  'Development', 'Design']
-
+if(window.innerWidth > 1201){
+subTitles = ['Overview',  'Development', 'Design']
+}
 if(props.location.state.title !== undefined){
 
     console.log(props.location.state.title.includes("Asset"))
@@ -34,7 +35,7 @@ let images : string[] = []
                 <div className="header">
                     <h1>{props.location.state.title}</h1>
 
-                    {props.location.state.title.includes("Asset") ? 
+                    {props.location.state.title.includes("Asset") || window.innerWidth < 1201 ? 
                  null
                 :
                 <button onClick={() => window.open(`${props.location.state.link}`, '_blank')}  className="PItem-Button">{props.isDev ? 'GitHub' : 'Video'}</button>

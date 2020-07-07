@@ -1,6 +1,4 @@
 import * as React from 'react';
-import { transform } from 'framer-motion';
-import { type } from 'os';
 
 interface IModuleData{
     sideList: object[],
@@ -36,12 +34,14 @@ function Developemnt(props: IModuleData) {
                     })}
                     </ul>
                 </aside>
+                {window.innerWidth > 1201 && 
                 <article className="body">
                 <p className={props.darkMode ? "comment" : "dark"}>{props.section1}</p>
                 <p className={props.darkMode ? "code" : "dark"}>{props.darkMode && <div className="init"><span className="let">let</span><span className="var"> AppOne</span></div>}{props.section2}</p>
                 <p className={props.darkMode ? "code" : "dark"}>{props.darkMode && <div className="init"><span className="let">let</span><span className="var"> AppTwo</span></div>}{props.section3}</p>
                 <p className={props.darkMode ? "comment" : "dark"}>{props.section4}</p>
                 </article>
+                }
             </section>
             
         </div>

@@ -3,28 +3,54 @@
     @include ElemDimensions();
     @extend %flex-end;
 
+    @include for-tablet-portrait-up(){
+        @include align-items(flex-start);
+     }
+
 
     > img{
         position: absolute;
         min-width: 30%;
         max-width: 30%;
+
+        @include for-tablet-portrait-up(){
+           min-width: 80%;
+         }
         
     }
      > .FImage{
          margin-top: 250px;
         z-index: 1;
+
+        @include for-tablet-portrait-up(){
+            margin: 0 ;
+            top: 100px;
+            padding-left: 60px;
+         }
     }
     > .BImage{
         padding-right: 300px;
         top: 150px;
         z-index: 0;
         transition: 0.5s all;
+
+        @include for-tablet-portrait-up(){
+            margin-left: 10px;
+            top: 10px;
+         }
     }
 }
 
 .PItem-Title{
     position: absolute;
-    margin: 0px 0px 0px 50px
+    margin: 0px 0px 0px 50px;
+
+    @include for-tablet-portrait-up(){
+        margin: 120px 0px 0px 25px;
+        z-index: 2;
+    }
+
+    
 }
 
 .PItems-container{
@@ -35,9 +61,19 @@
     @extend %flex-center-evenly;
     padding-left: 7.5%;
 
+    @include for-tablet-portrait-up(){
+        @include ElemDimensions(80%, 250px);
+        top: 300px;
+    }
+
     > .PItems-buttons{
         @extend %flex-between-center ;
         @include ElemDimensions(100%, auto);
+
+        @include for-tablet-portrait-up(){
+            margin-top: 15px;
+        }
+        
 
         > .PItem-Button{
             @include ElemDimensions(45% , 50px);
@@ -49,6 +85,12 @@
             font-weight: 700;
             font-size: 1.5rem;
             bottom: 0;
+
+            @include for-tablet-portrait-up(){
+                @include ElemDimensions(48%, 50px);
+                top: 300px;
+                font-size: 1rem;
+            }
         
         }
         
@@ -65,7 +107,16 @@
     
         font-weight: 700;
         font-size: 1.2rem;
+
+        @include for-tablet-portrait-up(){
+            font-size: 1rem;
+        }
         
     }
 }
 
+.tags{
+    @include for-tablet-portrait-up(){
+        font-size: 0.9rem;
+    }
+}

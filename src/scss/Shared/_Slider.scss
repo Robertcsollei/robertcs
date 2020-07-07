@@ -10,8 +10,21 @@
     left: 300px;
     opacity: 0.9;
 
+    @include for-tablet-portrait-up(){
+        left: 0px;
+        min-width: 100%;
+        max-width: 100%;
+      }
     
-    
+}
+
+.focusElem{
+    left: 16%;
+
+    @include for-tablet-portrait-up(){
+        left: 0px;
+        min-width: 100%;
+      }
 }
 
 #slider{

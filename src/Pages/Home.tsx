@@ -7,9 +7,9 @@ import testFunctions from '../js/functions';
 
 function Home(){
     return(
-        <div id="Home">
+        <div id="Home" className="Home">
             <canvas id="canvas" ref={testFunctions}></canvas>
-            <Square />
+            <Square idName={'HomeSquare'} />
             <div className="homeContent">
                 <h1 className="HeroTitle">Hi,<br/> I am Rob,<br/> a front-end dev.</h1>
                 <h4 className="HeroSubTitle">Front-end / Web design / UX / UI</h4>

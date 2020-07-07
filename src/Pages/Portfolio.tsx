@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 
 import Square from '../Shared/_SquareGraphic'
@@ -17,6 +17,8 @@ type IObjectType = {
 function Portfolio(){
    const [state, setState] = useState({count: 0})
    const [ObjectType, setObjectType] = useState<any>([]);
+   const [refs, setRefs] = useState([])
+   
  
     useEffect(() => {
       const fetchData = async () => {
@@ -25,9 +27,20 @@ function Portfolio(){
         );
    
         setObjectType(result);
+        
+        for(let i = 0; i< result.data.length; i++){
+            let pi = document.getElementById(`${i}`)
+            //@ts-ignore
+            pi.addEventListener('click', ()=> {
+               setState((state) => {
+                   return {count: i}
+               })
+            })
+        }
       };
    
       fetchData();
+     
     }, []);
 
     function Count(entry: boolean){
@@ -42,6 +55,7 @@ function Portfolio(){
         })
     }
 
+    console.log(state.count)
     function incrementCount() {
         
         if(state.count < ObjectType.data.length - 1){
@@ -57,15 +71,17 @@ function Portfolio(){
             
          
       }
- 
+      
 
+     
+     
 
     return(
         <div className="container">
 
 
             
-            <Square width={25} height={70} top={10} left={20} />
+            <Square idName={'PortfolioSquare'} />
 
 
             {/* if data is loading */}
@@ -85,6 +101,7 @@ function Portfolio(){
             thumbnails = {ObjectType.data[state.count].thumbnails}
             length = {ObjectType.data.length}
             active = {state.count}
+            
     />     }
     
 

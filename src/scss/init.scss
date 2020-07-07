@@ -135,6 +135,9 @@ h1{
     text-shadow: -4px 4px $blue;
     font-size: 3.5rem;
     margin: 0;
+    @include for-tablet-portrait-up(){
+        font-size: 2rem;
+    }
 }
 
 h2{

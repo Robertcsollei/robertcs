@@ -10,29 +10,79 @@ nav{
     @include flexbox();
     @include justify-content(flex-start);
     @include ElemDimensions($width:300px);
-    z-index: 5;
+    @include for-tablet-portrait-up(){
+        position: absolute;
+        width: 80%;
+        pointer-events: none;
+    };
     
+    z-index: 6;
+    
+    > .hamburgerMenu{
+        pointer-events: all;
+        @include ElemDimensions(50px, 50px);
+        background-color: $navDark;
+        border-radius: 50%;
+        margin:25px;
+        @extend %flex-center-center;
+        font-size: 1.5rem;
+        z-index: 7;
+        transition: 0.7s;
+    }
+
+    > #close{
+        background-color: $white;
+       
+        color: $navDark;
+        
+    }
 
     > .NavContainer{
-        
+
+        pointer-events: all;
         @extend  %flex-center;
         @include justify-content(space-between);
-        @include ElemDimensions();
+        width: 100%;
+        height: 100%;
         background: linear-gradient(90deg , $navLight , $navDark);
+        transition: 0.7s;
+
+
+        @include for-tablet-portrait-up(){
+            position: absolute;
+            width: 0%;
+            overflow: hidden;
+        }
 
         > .NavHeader{
             @include ElemDimensions($height: auto);
             @extend %flex-center;
             transform-origin: right;
             border-bottom: 2px solid $white;
+
+            @include for-tablet-portrait-up(){
+                @include flex-direction(row);
+                @include justify-content(center);
+                @include align-items(center);
+            }
+
            > a{
                 @include ElemDimensions(200px, 200px);
                 margin: 25px;
                 
+                @include for-tablet-portrait-up(){
+                    @include ElemDimensions(75px, 75px);
+                    padding: 0;
+                }
                 
             }
             > .MyName{
                 margin-bottom: 20px;
+
+                @include for-tablet-portrait-up(){
+                    
+                    margin: 0;
+                }
 
                 > .Title{
                     @extend %space-reset;
@@ -59,6 +109,10 @@ nav{
 .soMe{
     margin-top: 50px;
     z-index: 1;
+    @include for-tablet-portrait-up(){
+        margin: 40px;
+    }
+    
 }
 
 .LogoLink > img{
@@ -80,6 +134,10 @@ nav{
                 @include ElemDimensions($height: 10%);
                 
                 margin-top: 0px;
+
+                @include for-tablet-portrait-up(){
+                    @include ElemDimensions($height: 15%);
+                }
 
                
                 

@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 
 import ProgressIcons from '../Shared/ProgressIcons'
 import Buttons from '../Shared/_Buttons'
+import { Console } from 'console';
 
 interface IImages{
     images: string[]
@@ -58,8 +59,9 @@ function MoveItem(operator: boolean) {
             console.log('in')
             const prevElement: HTMLElement | null = document.getElementById(`${state.count}`);
             if(prevElement !== null){
-                
-                currentElement.style.left = '16%'
+                console.log(currentElement1,prevElement )
+                currentElement.classList.toggle('toggleElem');
+                currentElement.style.left = '0%'
                 prevElement.style.left = '-100%'
                 console.log(state.count - 1, state.count + 1 )
                 
@@ -72,13 +74,14 @@ function MoveItem(operator: boolean) {
         if(!operator){
             
             const prevElement: HTMLElement | null = document.getElementById(`${state.count}`);
-
+             
             if(currentElement !== null){
                 currentElement.style.left = '100%'
             } 
 
             if(prevElement !== null){
-                currentElement1.style.left = '16%'
+                currentElement1.classList.toggle('toggleElem');
+                currentElement1.style.left = "0%"
                 prevElement.style.left = '-100%'
                 prevElement.style.left = '100%'
                 

@@ -1,6 +1,20 @@
 .aboutHeading{
     @include ElemDimensions(70%, auto);
     margin: 50px;
+
+    @include for-tablet-portrait-up(){
+      margin-top: 90px;
+     }
+
+    > p {
+
+        @include for-tablet-portrait-up(){
+           height: 0px;
+           overflow: hidden;
+        }
+
+        
+    }
 }
 
 .aboutContent{
@@ -20,6 +34,10 @@
             
         @include ElemDimensions(300px, auto);
             @extend %flex-center-evenly;
+            @include for-tablet-portrait-up(){
+                @include ElemDimensions(100%, 50px);
+              @include justify-content(space-between);
+             }
         
         > .activeBtn{
             background-color: rgba(0,0,0,0);
@@ -60,6 +78,8 @@
                 transform: scale(0.99);
                 transform-origin: top left;
                 transition: 0.7s;
+
+                
             }
             > .development{
                 background: linear-gradient(90deg, $navDark, $navLight);
@@ -75,10 +95,13 @@
                     @include flexbox();
                     @include flex-direction(row);
 
+                   
+
 
                     > .sideBar{
                         @include ElemDimensions(30%, 100%);
                         background-color: $navLight;
+                        
     
                         > .dev-list{
                             @include ElemDimensions(100%, 100%);
@@ -89,13 +112,23 @@
                                @include flexbox();
                                 @include flex-direction(row);
                                 margin-top: 5px;
+                                white-space: nowrap;
+                                
+
+                                
     
                                 > img{
                                     margin-left: 20px;
                                     @include ElemDimensions(20px, 20px);
+                                    @include for-tablet-portrait-up(){
+                                     margin-left: 30px;
+                                    }
                                 }
                                 > h3{
                                     margin-left: 30px;
+                                    @include for-tablet-portrait-up(){
+                                        margin-left: 35px;
+                                    }   
     
                                 }
     

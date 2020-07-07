@@ -52,7 +52,7 @@ class Contact extends React.Component {
         return(
             <form id="Home" className="contact-form" onSubmit={ (e) => this.formSubmit(e)}>
                 <canvas id="canvas" ref={testFunctions}></canvas>
-                  <Square width={25} height={70} top={15} left={42.5} />
+                  <Square idName={"ContactsSquare"} isCircle={false} />
                 <h1>Get in touch!</h1>
                 <label className="message-name" htmlFor="message-name">Your Name</label>
                 <input onChange={e => this.setState({ name: e.target.value})} name="name" type="text" className="message-name"  placeholder="Your Name" value={this.state.name}/>

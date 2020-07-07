@@ -1,15 +1,13 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 
-import {onLoad} from '../js/scaler'
+
 
 import Loading from '../Shared/_Loading'
 
-import SociamMediaIcons from '../Shared/_SociamMedia';
 import Square from '../Shared/_SquareGraphic'
 
 import Development from '../Shared/_Development';
-import Design from '../Shared/_design';
 
 function About(){
 
@@ -29,10 +27,6 @@ function About(){
     }, []);
 
 
-    useEffect(() => {
-        console.log('hello')
-        onLoad()
-    })
 
 
     function SwitchUpPlus(){
@@ -48,10 +42,10 @@ function About(){
 
     return(
         <div className="container">
-            <Square width={300} top={10} left={80} isCircle={true} />
+            <Square idName={'aboutCircle'} isCircle={true} />
             <section className="aboutHeading">
                 <h1>Robert Csöllei</h1>
-                {typeof(ObjectType.data) !== "undefined"  &&  <p>{ObjectType.data[0].Description}</p>}
+                {(typeof(ObjectType.data) !== "undefined") && window.innerWidth > 1201  &&  <p>{ObjectType.data[0].Description}</p>}
             </section>
             <section className="aboutContent">
                 <div className="line"></div>

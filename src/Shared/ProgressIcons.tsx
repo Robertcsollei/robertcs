@@ -22,13 +22,13 @@ function ProgressIcons(props : IIconProps) {
         <div className="progressIcons">
            {NavIcons.map((item, index) => {
                return index === props.active ? 
-               <div key={index} className="activeCircle">
+               <div id={`${index}`} key={index} className="activeCircle">
                    <div className="activeCircleInner">
                        
                     </div>
                 </div>
                 :
-                <div key={index} className="inactiveCircle"></div>
+                <div id={`${index}`} key={index} className="inactiveCircle"></div>
            })}
         </div>
     );

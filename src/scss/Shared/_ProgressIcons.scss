@@ -5,9 +5,14 @@
     top: 50px;
     right: 50px;
 
+    @include for-tablet-portrait-up(){
+        top: 25px;
+        right: 25px;
+    }
+
     > .activeCircle, > .inactiveCircle{
         @include ElemDimensions(25px, 25px);
-        border: 4px solid $navLight;
+        border: 4px solid $white;
         border-radius: 50%;
         margin-bottom: 10px;
         @extend %flex-center-center;
