@@ -43,7 +43,6 @@ useEffect(() => {
  
 }, [hamburger.set, hamburger.isBig])
 
-console.log(hamburger.set)
     return(
         <nav>
           <div id={hamburger.set ? "close" : ""} onClick={toggleNav} className="hamburgerMenu" style={hamburger.isBig ?  {display: 'none'} : {display: 'flex'}}><i className="fa fa-bars"></i></div>

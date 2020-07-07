@@ -3,7 +3,6 @@ import React, {useState} from 'react';
 
 import ProgressIcons from '../Shared/ProgressIcons'
 import Buttons from '../Shared/_Buttons'
-import { Console } from 'console';
 
 interface IImages{
     images: string[]
@@ -45,7 +44,7 @@ function incrementCount() {
         
 }
 
-
+console.log(window.innerWidth)
 
 function MoveItem(operator: boolean) {
     const currentElement: HTMLElement | null = document.getElementById(`${state.count + 1}`);
@@ -56,14 +55,19 @@ function MoveItem(operator: boolean) {
 
 
         if(operator){
-            console.log('in')
+            
             const prevElement: HTMLElement | null = document.getElementById(`${state.count}`);
             if(prevElement !== null){
-                console.log(currentElement1,prevElement )
+                
                 currentElement.classList.toggle('toggleElem');
-                currentElement.style.left = '0%'
+                if(window.innerWidth > 1200){
+                    currentElement.style.left = "300px"
+                }else{
+                    currentElement.style.left = '0px'
+                }
+               
                 prevElement.style.left = '-100%'
-                console.log(state.count - 1, state.count + 1 )
+                
                 
             }else{
                 currentElement.style.left = '-100%'
@@ -81,11 +85,16 @@ function MoveItem(operator: boolean) {
 
             if(prevElement !== null){
                 currentElement1.classList.toggle('toggleElem');
-                currentElement1.style.left = "0%"
+                if(window.innerWidth > 1200){
+                    currentElement1.style.left = "300px"
+                }else{
+                    currentElement1.style.left = "0px"
+                }
+                
                 prevElement.style.left = '-100%'
                 prevElement.style.left = '100%'
                 
-                console.log(state.count - 1, state.count + 1 )
+                
                 
             }
             

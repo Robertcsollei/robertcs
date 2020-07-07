@@ -12,12 +12,7 @@ function PortfolioItem(props: any) {
 if(window.innerWidth > 1201){
 subTitles = ['Overview',  'Development', 'Design']
 }
-if(props.location.state.title !== undefined){
 
-    console.log(props.location.state.title.includes("Asset"))
-    console.log(props.location.state.title)
-    
-}
 
 let subDesc : string[] = [];
 subDesc.push(props.location.state.desc)

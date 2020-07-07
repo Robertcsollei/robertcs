@@ -14,9 +14,12 @@
         left: 0px;
         min-width: 100%;
         max-width: 100%;
+        height: 35%;
       }
     
 }
+
+
 
 .focusElem{
     left: 16%;
@@ -39,6 +42,9 @@
        }
        &:hover > .SliderItem{
         height: 90%;   
+        @include for-tablet-portrait-up(){
+           height: 70%;
+          }
        } 
        
        &:hover > .navButtons{
