@@ -10,12 +10,16 @@ function Nav(){
   const [hamburger, setHamburger] = useState({set: false, isBig: false});
 
   let isBig = false
-  if(window.innerWidth > 1200){
-    isBig = true
-  }
-  if(window.innerWidth < 1201){
-    isBig = false
-  }
+
+  window.addEventListener('resize', () => {
+    if(window.innerWidth > 1200){
+      isBig = true
+    }
+    if(window.innerWidth < 1201){
+      isBig = false
+    }
+  })
+ 
 
   function toggleNav(){
     if(window.innerWidth < 1201){

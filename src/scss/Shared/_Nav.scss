@@ -46,12 +46,13 @@ nav{
         height: 100%;
         background: linear-gradient(90deg , $navLight , $navDark);
         transition: 0.7s;
+        overflow: hidden;
 
 
         @include for-tablet-portrait-up(){
             position: absolute;
             width: 0%;
-            overflow: hidden;
+           
         }
 
         > .NavHeader{

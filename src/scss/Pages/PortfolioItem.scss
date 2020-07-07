@@ -39,7 +39,7 @@
     margin-right: 100px;
 
     @include for-tablet-portrait-up(){
-       margin: -10px 0px;
+       margin: -20px 0px;
        
      }
     
@@ -49,6 +49,20 @@
         @include for-tablet-portrait-up(){
             @include ElemDimensions(90%, 20%);
             font-size: 0.9rem;
+           
+            
+         }
+
+         @include for-phone-only(){
+            font-size: 0.8rem;
+        }
+         h2{
+            @include for-tablet-portrait-up(){
+                margin-bottom: 2px;
+               
+                
+             }
+
             
          }
     }
